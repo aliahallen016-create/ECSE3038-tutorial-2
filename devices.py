@@ -30,3 +30,15 @@ def hottest(devices):
     return hottest_device
 
 print(f"Hottest Device: {hottest(readings)}")
+
+def to_status(devices):
+    for device in devices:
+        if not device['online']:
+            return {
+                'device': device['name'],
+                'status': 'offline',
+                'celsius': device['temp']
+            }
+            print(f"Device {device['name']} is offline.")
+    
+print(f"Device Status: {to_status(readings)}")
