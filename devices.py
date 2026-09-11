@@ -38,7 +38,5 @@ def to_status(devices):
                 'device': device['name'],
                 'status': 'offline',
                 'celsius': device['temp']
-            }
-            print(f"Device {device['name']} is offline.")
-    
+            }   
 print(f"Device Status: {to_status(readings)}")
